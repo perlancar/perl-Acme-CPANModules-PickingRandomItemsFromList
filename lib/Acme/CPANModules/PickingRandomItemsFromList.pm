@@ -19,11 +19,11 @@ array using the `$ary[rand @ary]` idiom.
 
 If you do not want to allow duplicates:
 
-<pm:List::Util> (from version 1.54, 2020-02-02) provides `sample`. If you use an
-older version, you can use `shuffle` then `head` to get as many elements as you
-need.
+<pm:List::Util> (from version 1.54, 2020-02-02) provides `sample()`. If you use
+an older version, you can use `shuffle()` then get as many number of samples as
+you need using slice (`@shuffled[0..$num_wanted-1]`) or `head()`.
 
-<pm:List::MoreUtils> provides `samples`.
+<pm:List::MoreUtils> provides `samples()`.
 
 Keywords: sample, sampling.
 
@@ -42,7 +42,7 @@ _
 1;
 # ABSTRACT:
 
-=head1 SEE ALSO
+=head1 prepend:SEE ALSO
 
 L<Bencher::Scenario::SamplingFromList> for the benchmark, which we will probably
 include in the future.
