@@ -1,6 +1,10 @@
+# no code
+## no critic: TestingAndDebugging::RequireUseStrict
 package Acme::CPANModules::PickingRandomItemsFromList;
 
+# AUTHORITY
 # DATE
+# DIST
 # VERSION
 
 our $LIST = {
@@ -8,10 +12,20 @@ our $LIST = {
     description => <<'_',
 
 If you are picking random lines from a file, there's a separate CPANModules list
-for it: <pm:Acme::CPANModules::PickingRandomLinesFromFile>. If your "list" is a
-Perl array, there's `shuffle` from <pm:List::Util> and `samples` from
-<pm:List::MoreUtils> (if you don't want duplicates) or you can just select
-random elements using `rand()` if you don't mind duplicates.
+for it: <pm:Acme::CPANModules::PickingRandomLinesFromFile>.
+
+If you want to allow duplicates, you can repeatedly pick random elements from an
+array using the `$ary[rand @ary]` idiom.
+
+If you do not want to allow duplicates:
+
+<pm:List::Util> (from version 1.54, 2020-02-02) provides `sample`. If you use an
+older version, you can use `shuffle` then `head` to get as many elements as you
+need.
+
+<pm:List::MoreUtils> provides `samples`.
+
+Keywords: sample, sampling.
 
 _
     tags => ['task'],
@@ -27,3 +41,8 @@ _
 
 1;
 # ABSTRACT:
+
+=head1 SEE ALSO
+
+L<Bencher::Scenario::SamplingFromList> for the benchmark, which we will probably
+include in the future.
