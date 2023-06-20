@@ -52,7 +52,7 @@ allowing duplicates) or with replacement (allowing duplicates).
 <pm:Data::Random::Weighted> currently can only pick a single item.
 
 _
-    tags => ['task'],
+    tags => ['task', 'sampling', 'random'],
     entries => [
         {
             module=>'List::Util',
@@ -79,3 +79,5 @@ _
 
 L<Bencher::Scenario::SamplingFromList> for the benchmark, which we will probably
 include in the future.
+
+Related lists: L<Acme::CPANModules::Sampling>
