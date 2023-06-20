@@ -1,3 +1,10 @@
+0.003   2023-06-20  Released-By: PERLANCAR; Urgency: medium
+
+        - Reorganize description, add entries
+          (Array::Sample::WeightedRandom, Random::Skew,
+          Data::Random::Weighted).
+
+
 0.002   2021-09-18  Released-By: PERLANCAR; Urgency: medium
 
 	- Mention List::Util::sample().
