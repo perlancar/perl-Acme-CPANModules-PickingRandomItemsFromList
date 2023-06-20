@@ -8,7 +8,7 @@ use strict;
 # VERSION
 
 our $LIST = {
-    summary => 'Picking random items from a list',
+    summary => 'List of modules to pick random items from a list',
     description => <<'_',
 
 If you are picking random lines from a file, there's a separate CPANModules list
